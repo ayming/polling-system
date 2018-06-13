@@ -1,0 +1,21 @@
+.HomeListItem-- {
+
+  &wrapper {
+    position: relative;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #26658f;
+  }
+
+  &body {
+    color: #333;
+  }
+
+}

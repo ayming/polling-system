@@ -1,6 +1,7 @@
 import React from 'react'
 
 import HomeHeroContainer from './containers/HomeHeroContainer'
+import HomeListContainer from './containers/HomeListContainer'
 import './Home.css'
 
 class Home extends React.PureComponent {
@@ -8,10 +9,7 @@ class Home extends React.PureComponent {
     return (
       <div className="Home--wrapper">
         <HomeHeroContainer />
-        <div className="row">
-          <div className="col-sm-6">123</div>
-          <div className="col-sm-6">123</div>
-        </div>
+        <HomeListContainer />
       </div>
     )
   }
