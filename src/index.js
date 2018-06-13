@@ -7,11 +7,14 @@ import 'bootstrap/dist/css/bootstrap.css'
 import history from './history'
 import router from './router'
 import App from './components/App'
+import configureStore from './store/configureStore'
 import { __DEV__ } from './constants/env'
 // import registerServiceWorker from './registerServiceWorker'
 import './index.css'
 
-const context = {}
+const context = {
+  store: configureStore({}, { history }),
+}
 
 const container = document.getElementById('root')
 let currentLocation = history.location
