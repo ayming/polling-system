@@ -7,6 +7,12 @@
   &title {
     margin-left: 30px;
     font-size: 24px;
+    color: #001246;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
 }

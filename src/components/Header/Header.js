@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+
+import Link from '../Link'
 import './Header.css'
 
 class Header extends React.PureComponent {
@@ -12,7 +14,7 @@ class Header extends React.PureComponent {
     const { className } = this.props
     return (
       <header className={classnames('Header--wrapper', className)}>
-        <div className="Header--title">Polling System</div>
+        <Link className="Header--title" to="/">Polling System</Link>
       </header>
     )
   }

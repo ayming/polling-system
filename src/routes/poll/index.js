@@ -2,10 +2,14 @@ import React from 'react'
 
 import Poll from './Poll'
 import Layout from '../../components/Layout'
+import { hasPollSelector } from '../../selectors'
 import { fetchAll } from '../../actions/poll'
 
 async function action({ params, store }) {
-  await store.dispatch(fetchAll())
+  const hasPoll = hasPollSelector(store.getState())
+  if (!hasPoll) {
+    await store.dispatch(fetchAll())
+  }
   // select question by pollId
   const { pollId } = params
   const { polls = {} } = store.getState()

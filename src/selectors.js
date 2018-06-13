@@ -21,6 +21,15 @@ export const pollListSelector = createSelector(
 )
 
 /**
+ * Select a flag whether it has poll question or not
+ * @returns {boolean} hasPoll
+ */
+export const hasPollSelector = createSelector(
+  pollListSelector,
+  (pollList) => pollList.length > 0
+)
+
+/**
  * Select latest poll question state
  * @returns {object} question
  */

@@ -5,7 +5,7 @@ class Poll extends React.PureComponent {
   render() {
     return (
       <div className="Poll--wrapper">
-        Poll
+        <pre>{JSON.stringify(this.props, null, 2)}</pre>
       </div>
     )
   }
