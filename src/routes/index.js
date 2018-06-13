@@ -10,6 +10,10 @@ const routes = {
       path: '',
       load: () => import(/* webpackChunkName: 'home' */ './home'),
     },
+    {
+      path: '/poll/:pollId',
+      load: () => import(/* webpackChunkName: 'poll' */ './poll'),
+    },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)
     {
